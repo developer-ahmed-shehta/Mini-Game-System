@@ -111,7 +111,7 @@ celery -A main worker --pool=solo -l info
 
 ---
 
-## 🧠 Player Logic Summary
+## Player Logic Summary
 
 - Each player has 6 buildings (IDs 1 to 6)
 - Buildings 1–3 are open; 4–6 require dependencies
