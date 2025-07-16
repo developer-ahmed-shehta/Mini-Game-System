@@ -5,7 +5,7 @@ import json
 
 from .services.player_service import get_or_create_player
 from .services.building_service import start_building,accelerate_building
-from .services.db import buildings
+from .services.db import buildings,players
 
 @login_required
 def player_info(request):
@@ -48,6 +48,11 @@ def building_list(request):
     all_buildings = list(buildings.find({}, {"_id": 1, "name": 1, "duration": 1}))
     return JsonResponse({"buildings": all_buildings})
 
+
+@login_required  # Optional: Remove if this is public or for debugging only
+def all_players_buildings_view(request):
+    all_players = list(players.find({}, {"_id": 0, "user_id": 1, "buildings": 1}))
+    return JsonResponse({"players": all_players})
 
 
 from celery.result import AsyncResult
