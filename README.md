@@ -1,5 +1,5 @@
 
-# 🕹️ Mini Game Backend System
+#  Mini Game Backend System
 
 This is a backend for a building-style strategy game, built with Django, Celery, Redis, and MongoDB.
 
@@ -33,7 +33,7 @@ cd mini-game-system
 
 ### 2. Install Dependencies
 
-> 💡 It's recommended to use a virtual environment
+>  It's recommended to use a virtual environment
 
 ```bash
 pip install -r requirements.txt
